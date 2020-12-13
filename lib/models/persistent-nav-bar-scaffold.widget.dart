@@ -2,10 +2,12 @@ part of persistent_bottom_nav_bar;
 
 ///Navigation bar controller for `PersistentTabView`.
 class PersistentTabController extends ChangeNotifier {
-  PersistentTabController({int initialIndex = 0})
+  PersistentTabController({this.initialIndex = 0})
       : _index = initialIndex,
         assert(initialIndex != null),
         assert(initialIndex >= 0);
+
+  int initialIndex;
 
   bool _isDisposed = false;
   int get index => _index;
